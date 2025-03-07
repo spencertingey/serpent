@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt3ntfsi0c4a5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4kf5"]
+size = Vector2(50, 48)
+
+[sub_resource type="Gradient" id="Gradient_c4kf5"]
+offsets = PackedFloat32Array(0, 0.0653266, 0.21608, 0.376884, 0.6, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.148332, 0.148332, 0.148332, 1, 0.137737, 0.137737, 0.137737, 1, 0.351759, 0.351759, 0.351759, 1, 0.101713, 0.101713, 0.101713, 1, 0, 0, 0, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_af3dt"]
+gradient = SubResource("Gradient_c4kf5")
+
+[node name="Food" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_c4kf5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_af3dt")

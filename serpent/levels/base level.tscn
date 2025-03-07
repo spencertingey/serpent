@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://b8beuxlebg3fo"]
+
+[ext_resource type="PackedScene" uid="uid://dnqlv2vu8w0tm" path="res://scenes/player.tscn" id="1_2gle8"]
+[ext_resource type="Script" uid="uid://cde4ddfut4rsb" path="res://scenes/player.gd" id="2_p3gm8"]
+[ext_resource type="PackedScene" uid="uid://bt3ntfsi0c4a5" path="res://scenes/food.tscn" id="3_xquvr"]
+
+[sub_resource type="TileSet" id="TileSet_l2s3v"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_p08ma"]
+
+[sub_resource type="TileSet" id="TileSet_1he4k"]
+sources/0 = SubResource("TileSetScenesCollectionSource_p08ma")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_saqwc"]
+region = Rect2(2000, 2000, 0, 0)
+
+[node name="BaseLevel" type="Node2D"]
+
+[node name="Background" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_l2s3v")
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+offset_left = -839.0
+offset_top = -640.0
+offset_right = 844.0
+offset_bottom = 655.0
+
+[node name="Blocks" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_1he4k")
+
+[node name="Player" parent="." instance=ExtResource("1_2gle8")]
+z_index = 1
+position = Vector2(-262, -4)
+script = ExtResource("2_p3gm8")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(259, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_saqwc")
+
+[node name="Food" parent="." instance=ExtResource("3_xquvr")]
+position = Vector2(-401, -224)
