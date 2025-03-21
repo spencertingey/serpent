@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://dssv4qnydi6nh"]
+
+[ext_resource type="Script" uid="uid://dnm11mkn3vt13" path="res://scenes/main.gd" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://d1kk4ir2ibg3k" path="res://scenes/serpent_segment.tscn" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://cyk0swm0k4607" path="res://scenes/hud.tscn" id="3_tbgi4"]
+
+[sub_resource type="MeshTexture" id="MeshTexture_tefeu"]
+image_size = Vector2(1000, 1000)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6xl0"]
+bg_color = Color(0.518597, 0.620232, 0.971412, 1)
+
+[node name="main" type="Node"]
+script = ExtResource("1_sugp2")
+serpent_scene = ExtResource("2_jyhfs")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(500, 550)
+texture = SubResource("MeshTexture_tefeu")
+
+[node name="background panel" type="Panel" parent="background"]
+offset_left = -500.0
+offset_top = -550.0
+offset_right = 500.0
+offset_bottom = 500.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o6xl0")
+
+[node name="hud" parent="." instance=ExtResource("3_tbgi4")]

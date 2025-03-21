@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1kk4ir2ibg3k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqi5l"]
+bg_color = Color(0.317191, 0.604806, 0.280704, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.317191, 0.604806, 0.280704, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="SerpentSegment" type="Panel"]
+offset_right = 50.0
+offset_bottom = 50.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dqi5l")
