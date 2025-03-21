@@ -2,6 +2,7 @@ extends Node
 
 @export var serpent_scene : PackedScene
 
+#game variables
 var score : int
 var game_started : bool = false
 
@@ -27,11 +28,28 @@ var can_move
 func _ready():
 	new_game()
 	
-func new_game()
-score = 0
-
-
+func new_game():
+	score = 0
+	$hud.get_node("ScoreLabel").text = "SCORE: " + str(score)
+	move_direction = up
+	can_move = true
+	generate_serpent()
+	
+func generate_serpent():
+	old_data.clear()
+	serpent_data.clear()
+	serpent.clear()
+	#starting with the start_pos, create tail segments vertically down
+	for i in range(3):
+		add_segment(start_pos + Vector2(0, i))
+		
+func add_segment(pos):
+	serpent_data.append(pos)
+	var SerpentSegment = serpent_scene.instantiate()
+	SerpentSegment.position = (pos * cell_size) + Vector2 (0, cell_size)
+	add_child(SerpentSegment)
+	serpent.append(SerpentSegment)
 
 #Called every frame. 'delta' is the elapsed time since the previous frame
-func _process(delta)
+func _process(delta):
 	pass

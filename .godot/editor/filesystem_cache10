@@ -1,8 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1742252922
-::res://levels/::1741907459
-base level.tscn::PackedScene::4704996710564641576::1741907459::0::1::::<><><>0<>0<><>::uid://dnqlv2vu8w0tm::::res://scenes/player.tscn<>uid://cde4ddfut4rsb::::res://scenes/player.gd<>uid://bt3ntfsi0c4a5::::res://scenes/food.tscn
-::res://scenes/::1741906543
+::res://::1742525163
+::res://levels/::1742331639
+base level.tscn::PackedScene::4704996710564641576::1742331639::0::1::::<><><>0<>0<><>::uid://dnqlv2vu8w0tm::::res://scenes/player.tscn<>uid://cde4ddfut4rsb::::res://scenes/player.gd<>uid://bt3ntfsi0c4a5::::res://scenes/food.tscn
+::res://scenes/::1742331640
 food.tscn::PackedScene/PackedScene::3778634831739781298::1741906543::0::1::::<><><>0<>0<><>::
+hud.tscn::PackedScene::6479568636550808470::1742331640::0::1::::<><><>0<>0<><>::
+main.gd::GDScript::8098115270233068900::1742255199::0::1::::<>Node<><>0<>0<><>::
+main.tscn::PackedScene::8461147742559169389::1742255199::0::1::::<><><>0<>0<><>::uid://dnm11mkn3vt13::::res://scenes/main.gd<>uid://d1kk4ir2ibg3k::::res://scenes/serpent_segment.tscn<>uid://cyk0swm0k4607::::res://scenes/hud.tscn
 player.gd::GDScript/GDScript::4993431725717811969::1741906543::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player.tscn::PackedScene/PackedScene::8105453902556162934::1741906543::0::1::::<><><>0<>0<><>::
+serpent_segment.tscn::PackedScene::9005475168845620098::1742254541::0::1::::<><><>0<>0<><>::

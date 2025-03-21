@@ -1,4 +1,5 @@
-res://scenes/main.gd
-res://scenes/hud.tscn
-res://scenes/main.tscn
 res://levels/base level.tscn
+res://scenes/main.gd
+res://scenes/main.tscn
+res://scenes/hud.tscn
+res://scenes/serpent_segment.tscn

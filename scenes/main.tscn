@@ -19,10 +19,16 @@ position = Vector2(500, 550)
 texture = SubResource("MeshTexture_tefeu")
 
 [node name="background panel" type="Panel" parent="background"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = -500.0
-offset_top = -550.0
-offset_right = 500.0
-offset_bottom = 500.0
+offset_top = -500.0
+offset_right = -500.0
+offset_bottom = -500.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_o6xl0")
 
 [node name="hud" parent="." instance=ExtResource("3_tbgi4")]
